@@ -54,3 +54,8 @@ Object.defineProperty(object, property,
 
 * Inheritance
   * use `Object.create()` since `new` would execute the create function
+
+* Class syntax
+  * constructor isn't a function, it's a class
+  * `extends`
+  * members aren't enumerable
