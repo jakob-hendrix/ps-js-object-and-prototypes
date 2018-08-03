@@ -40,4 +40,17 @@ Object.defineProperty(object, property,
 * prototype
   * functions have `prototype` property: the object **instance** that will become the prototype for all objects created using this function as a constructor
   * objects have `__proto__` property: object instance from which the object is inherited
-  * these are objects. Functions have a prototpye created that is attached in the backend.  Similarly, objects have a \_\_proto\_\_ created that point at the same instance
+  * these are objects (not like a class). Functions have a prototpye created that is attached in the backend.  Similarly, objects have a \_\_proto\_\_ created that point at the same instance
+
+* `new` keyword
+  * create an empty object `function MyObject() {}`
+  * add a new property to our object `MyObject.prototype.age = 1;`
+  * use `new` keyword to create an object "MyObject"
+  * `var name = new MyObject()`
+    * creates new object
+    * add \_\_proto\_\_ property, which is a pointer to MyObject.prototype
+    * executes MyObject constructor function
+  * if the object instance doesn't have a certain property, JS will then check it's protoype for that property
+
+* Inheritance
+  * use `Object.create()` since `new` would execute the create function
